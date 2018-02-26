@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Resources
+ * Template Name: Customers
  *
  */
 ?>
@@ -18,7 +18,7 @@
 				/* Start the Loop */
 				while ( have_posts() ) : the_post();
 				
-					include_once( 'templates/page/content-resources.php' );
+					include_once( 'templates/page/content-customers.php' );
 
 				endwhile;
 

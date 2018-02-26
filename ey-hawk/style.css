@@ -36,6 +36,13 @@ a:hover {
 a.navbar-brand img {
     width: 172px;
 }
+h1, h2, h3, h4, h5, h6 {
+    margin-top: 0;
+    color: #000;
+    font-family: "Roboto Condensed",sans-serif;
+    line-height: 1.1;
+    font-weight: 300;
+}
 strong {
 	font-weight: 700;
 }
@@ -637,6 +644,12 @@ aside.widget_rss ul li a:hover {
 	transition: all .2s ease;
 	border-color: #f0803c;
 }
+.no-margin-left {
+	margin-left: 0;
+}
+.no-padding-left {
+	padding-left: 0;
+}
 .btn-primary.white {
 	background: #fff;
 	border-color: #fff;
@@ -732,9 +745,18 @@ img.aligncenter {
 
 
 /* ---- isotope ---- */
-
-.grid {
-  border: 1px solid #333;
+.button-group.filters-button-group button {
+    border: 0;
+    padding: 10px 20px;
+    background: #fff;
+    color: #000;
+    font-family: "Roboto Condensed",sans-serif;
+    font-size: 16px;
+    line-height: 22px;
+    font-weight: 400;
+}
+button.button.is-checked {
+    color: #f0803c;
 }
 
 /* clear fix */
@@ -743,68 +765,118 @@ img.aligncenter {
   display: block;
   clear: both;
 }
-
-/* ---- .element-item ---- */
-
-.element-item {
-  position: relative;
-  float: left;
-  width: 100px;
-  height: 100px;
-  margin: 5px;
-  padding: 10px;
-  background: #888;
-  color: #262524;
+.grid-sizer {
+  width: 33%;
 }
 
+/* ---- .element-item ---- */
+.element-item {
+	border-radius: 6px 6px 5px 5px;
+	position: relative;
+	float: left;
+	margin: 5px;
+	padding: 10px 30px 30px;
+	color: #262524;
+    margin-bottom: 18px;
+    border: 1px solid #ccc;
+    text-align: left;
+    width: 31%;
+    -webkit-transition: box-shadow .4s ease,border-color .4s ease;
+    -moz-transition: box-shadow .4s ease,border-color .4s ease;
+    -ms-transition: box-shadow .4s ease,border-color .4s ease;
+    -o-transition: box-shadow .4s ease,border-color .4s ease;
+    transition: box-shadow .4s ease,border-color .4s ease;
+    -webkit-box-shadow: 0 10px 0 -5px rgba(0,0,0,0.03);
+    box-shadow: 0 10px 0 -5px rgba(0,0,0,0.03);
+}
+.element-item .section-cta {
+	margin-top: 15px;
+}
 .element-item > * {
   margin: 0;
   padding: 0;
 }
 
-.element-item .name {
-  position: absolute;
-
-  left: 10px;
-  top: 60px;
-  text-transform: none;
-  letter-spacing: 0;
-  font-size: 12px;
-  font-weight: normal;
+.element-item h3 {
+	font-weight: 300;
+	font-size: 2.2em;
+	margin-bottom: 20px;
+	line-height: 1.1;
+}
+.element-item h4 {
+	margin-bottom: 20px;
 }
 
-.element-item .symbol {
-  position: absolute;
-  left: 10px;
-  top: 0px;
-  font-size: 42px;
-  font-weight: bold;
-  color: white;
+/* Customers */
+section.customers .element-item {
+    border: 0;
+    border-radius: 0;
+    text-align: center;
+    -webkit-box-shadow: none;
+    box-shadow: 0 10px 0 -5px rgba(0,0,0,0.03);
 }
-
-.element-item .number {
-  position: absolute;
-  right: 8px;
-  top: 5px;
+section.customers .element-item a {
+	color: #fff;
+	width: 250px;
+    height: 250px;
+    display: block;
+    margin: auto;
+    position: relative;
+    background-repeat: no-repeat;
+    background-size: cover;
 }
-
-.element-item .weight {
-  position: absolute;
-  left: 10px;
-  top: 76px;
-  font-size: 12px;
+section.customers .element-item a:hover .hover-image-text {
+    opacity: 1;
+    background-color: rgba(255, 127, 11, 0.9);
 }
-
-.element-item.alkali          { background: #F00; background: hsl(   0, 100%, 50%); }
-.element-item.alkaline-earth  { background: #F80; background: hsl(  36, 100%, 50%); }
-.element-item.lanthanoid      { background: #FF0; background: hsl(  72, 100%, 50%); }
-.element-item.actinoid        { background: #0F0; background: hsl( 108, 100%, 50%); }
-.element-item.transition      { background: #0F8; background: hsl( 144, 100%, 50%); }
-.element-item.post-transition { background: #0FF; background: hsl( 180, 100%, 50%); }
-.element-item.metalloid       { background: #08F; background: hsl( 216, 100%, 50%); }
-.element-item.diatomic        { background: #00F; background: hsl( 252, 100%, 50%); }
-.element-item.halogen         { background: #F0F; background: hsl( 288, 100%, 50%); }
-.element-item.noble-gas       { background: #F08; background: hsl( 324, 100%, 50%); }
+section.customers .element-item a .hover-image-text {
+	display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    box-sizing: border-box;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-wrap: nowrap;
+    flex-wrap: nowrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+    text-align: center;
+    background: rgba(36,165,199,0.90);
+    opacity: 0;
+    -webkit-transition: opacity .3s ease-in-out;
+    -o-transition: opacity .3s ease-in-out;
+    -moz-transition: opacity .3s ease-in-out;
+    -ms-transition: opacity .3s ease-in-out;
+    transition: opacity .3s ease-in-out;
+}
+section.customers .element-item h3 {
+    text-align: center;
+    font-size: 26px !important;
+    line-height: 130% !important;
+    margin: 10px auto 0 auto;
+}
+section.customers .element-item p {
+	font-size: 14px !important;
+    line-height: 150% !important;
+    width: 250px;
+    margin: 0 auto 20px auto;
+}
+button.button:focus {
+    outline: none;
+}
+.button-group.filters-button-group {
+    margin-bottom: 40px;
+}
 
 @media (min-width: 992px) {
 	.navbar-toggleable-md .navbar-nav .navbar-item:not(.button) .nav-link {

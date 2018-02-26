@@ -1,23 +1,8 @@
 html {
 	height: 100% !important;
 }	
-/*main {
-	padding-top: 65px;
-	padding-bottom: 65px;
-}
 
-body {
-	padding-top: 30px;
-	padding-bottom: 95px;
-}
-body.admin-bar {
-	padding-top: 30px;
-}
-body.admin-bar .fixed-top {
-    top: 32px;
-}*/
-
-
+/* 5 column layout for Bootstrap */
 .col-xs-15,
 .col-sm-15,
 .col-md-15,

@@ -25,7 +25,7 @@
 				    	  $image = get_sub_field('card_image');
 				    	  $image_id = $image['id'];
 						  // and the image size you want to return
-							$image_size = 'homepage-success-logo';
+							$image_size = 'customer-success-logo';
 							$image_array = wp_get_attachment_image_src($image_id, $image_size);
 							$image_url = $image_array[0];
 				    ?>
@@ -45,7 +45,7 @@
     <div class="section-cta text-center">
 	    <?php if ( $button ) : ?>
     		<div class="text-center">
-	    		<a class="btn btn-primary has-margin" href="<?php echo $button_link; ?>" <?php echo $button_target == '1' ? ' target="_blank"': ''; ?>><?php echo $button; ?> ›</a>
+	    		<a class="btn btn-primary has-margin no-margin-left" href="<?php echo $button_link; ?>" <?php echo $button_target == '1' ? ' target="_blank"': ''; ?>><?php echo $button; ?> ›</a>
     		</div>
     	<?php endif; ?>
     	
