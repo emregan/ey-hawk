@@ -4,19 +4,24 @@ jQuery(document).ready(function($){
 	$(document).on("scroll", function(){
 		if ($(document).scrollTop() > 175){
 		  $("nav").addClass("shrink");
-		  $('.scroll-to-top').fadeIn(200);    // Fade in the arrow
+		  $('.scroll-to-top').addClass('active');    // Fade in the arrow
 		} else {
 			$("nav").removeClass("shrink");
-			$('.scroll-to-top').fadeOut(200);   // Else fade out the arrow
+			$('.scroll-to-top').removeClass('active');   // Else fade out the arrow
 		}
 	});
 	
 	$('.scroll-to-top').click(function() {      // When arrow is clicked
-	    $('body,html').animate({
+	    /*$('body,html').animate({
 	        scrollTop : 0                       // Scroll to top of body
-	    }, 500);
-	});
+	    }, 500); */
 	
+	    window.scroll({
+		  top: 0, 
+		  left: 0, 
+		  behavior: 'smooth' 
+		});
+	});
 	
 	/// move to hawk theme
 	$('.next-section-arrow').click(function( e ){
@@ -27,16 +32,6 @@ jQuery(document).ready(function($){
         }, 700);
     });
     
-    // Isotope
-    $('.sgrid').isotope({
-	  // options...
-	  itemSelector: '.elements-item',
-	  layoutMode: 'fitRows',
-	  masonry: {
-	    columnWidth: 400
-	  },
-	});
-	
 	// init Isotope
 	var $grid = $('.grid').isotope({
 	  itemSelector: '.element-item',
@@ -58,13 +53,7 @@ jQuery(document).ready(function($){
 	    return name.match( /ium$/ );
 	  }
 	};
-	// bind filter button click
-	$('.filters-button-group').on( 'click', 'button', function() {
-	  var filterValue = $( this ).attr('data-filter');
-	  // use filterFn if matches value
-	  filterValue = filterFns[ filterValue ] || filterValue;
-	  $grid.isotope({ filter: filterValue });
-	});
+	
 	// change is-checked class on buttons
 	$('.button-group').each( function( i, buttonGroup ) {
 	  var $buttonGroup = $( buttonGroup );
@@ -73,5 +62,60 @@ jQuery(document).ready(function($){
 	    $( this ).addClass('is-checked');
 	  });
 	});
+	
+	
+	// bind filter button click
+	var $filterButtonGroup = $('.filters-button-group');
+	var $filters = $filterButtonGroup.on( 'click', 'button', function() {	    
+	    var filterValue = $( this ).attr('data-filter');
+		// use filterFn if matches value
+		filterValue = filterFns[ filterValue ] || filterValue;
+		$grid.isotope({ filter: filterValue });
+	    	    
+	    // set filter in hash
+	    location.hash = 'filter=' + encodeURIComponent( filterValue );
+	    //location.hash = encodeURIComponent( filterValue );
+	  });
+	
+	var isIsotopeInit = false;
+	
+	// Hook filtering into the hashchange event so that Isotope filters can be applied as links. 
+    function getHashFilter() {
+		var hash = location.hash;
+		// get filter=filterName
+		var matches = location.hash.match( /filter=([^&]+)/i );
+	  	var hashFilter = matches && matches[1];
+	  	return hashFilter && decodeURIComponent( hashFilter );
+	}
+	
+	function onHashchange() {
+		
+	    var hashFilter = getHashFilter();
+	    
+	    if ( !hashFilter && isIsotopeInit ) {
+	      return;
+	    }
+	    isIsotopeInit = true;
+	    // filter isotope
+	    $grid.isotope({
+	      itemSelector: '.element-item',
+	      filter: hashFilter
+	    });
+
+	    // set selected class on button
+	    if ( hashFilter ) {
+	      $filters.find('.is-checked').removeClass('is-checked');
+	      $filters.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+	    }
+	    
+	    if ( hashFilter ) {
+		    $filterButtonGroup.find('.is-checked').removeClass('is-checked');
+		    $filterButtonGroup.find('[data-filter="' + hashFilter + '"]').addClass('is-checked');
+		  }
+	  }
+	
+	  $(window).on( 'hashchange', onHashchange );
+	  // trigger event handler to init Isotope
+	  onHashchange();
 	
 });

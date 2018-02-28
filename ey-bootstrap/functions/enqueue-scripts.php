@@ -8,7 +8,7 @@ function eybootstrap_enqueue_stuff() {
     // JQuery
     wp_enqueue_script(
         'jquery-script', 
-        'https://code.jquery.com/jquery-3.2.1.slim.min.js' // this is the location of your script file
+        'https://code.jquery.com/jquery-3.2.1.min.js' // this is the location of your script file
     ); 
     
     // Popper

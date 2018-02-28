@@ -32,20 +32,10 @@ $this_id = $post->ID;
 				
 				<div class="col-md-3 sidebar left">
 					
-					<?php //echo wpb_list_child_pages(); ?>
+					<?php echo wpb_list_child_pages(); ?>
 					
 					<?php
-						/*	
-						echo '$parent_id: ' . $parent_id . '~' . $this_id;
-						echo '<br>';
-						echo '$parent_title: ' . $parent_title;
-						echo '<br>';
-						echo '$parent_slug: ' . $parent_slug;
-						*/
-					?>
-					
-					<?php
-					if ( $parent_id == $this_id ) {
+					/*if ( $parent_id == $this_id ) {
 					    $children = wp_list_pages( array(
 					        'title_li' => '',
 					        'child_of' => $parent_id,
@@ -61,13 +51,15 @@ $this_id = $post->ID;
 					        'depth'    => 2,
 					        'echo'     => 0
 					    ) );
-					}
+					} 
 					 
-					if ( $children ) : ?>
-					    <ul>
-					        <?php echo $children; ?>
-					    </ul>
-					<?php endif; ?>
+					if ( $children ) {
+						echo '<ul>';
+						echo $children;
+						echo '</ul>';
+					}
+					*/
+					?>
 				
 				</div>
 				<div class="col-md-9">

@@ -35,4 +35,5 @@ require_once( 'functions/theme-support.php' );
 /** Widget Configuration */
 require_once( 'functions/widget-config.php' );
 
-wp_set_password( 'hansolo', 1 );
+/** OG Tags */
+require_once( 'functions/og-tags.php' );

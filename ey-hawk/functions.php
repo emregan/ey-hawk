@@ -37,23 +37,38 @@ function get_root_parent($page_id) {
 }
 
 
-// Cild pages
+// Left nav menu pages
 function wpb_list_child_pages() { 
-
 	global $post; 
-
-	if ( is_page() && $post->post_parent )
-
-		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->post_parent . '&echo=0' );
+	$string = '';
+	$parent_id = get_root_parent($post->ID);
+	$title = $post->post_title;
+	$url = get_permalink( $post);
+	if ( $post->ID == $parent_id )
+		$childpages = wp_list_pages( array(
+					        'title_li' => '',
+					        'child_of' => $parent_id,
+					        'sort_column'  => 'menu_order',
+					        'depth'    => 1,
+					        'echo'     => 0
+					    ) );
 	else
-		$childpages = wp_list_pages( 'sort_column=menu_order&title_li=&child_of=' . $post->ID . '&echo=0' );
-
+		$childpages = wp_list_pages( array(
+					        'title_li' => '',
+					        'child_of' => $parent_id,
+					        'sort_column'  => 'menu_order',
+					        'depth'    => 2,
+					        'echo'     => 0
+					    ) );
 	if ( $childpages ) {
 		$string = '<ul>' . $childpages . '</ul>';
+	} else {
+		$string = '<ul><li class="current_page_item"><a href="' . $url . '">' . $title . '</a></ul>';
 	}
-
 	return $string;
-
 }
-
 add_shortcode('wpb_childpages', 'wpb_list_child_pages');
+
+
+/** Custom Post Types */
+require_once( 'functions/cpt.php' );

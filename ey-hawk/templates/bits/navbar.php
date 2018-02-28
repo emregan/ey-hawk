@@ -2,8 +2,17 @@
 <nav class="navbar navbar-toggleable-md">
     
     <div class="container">
-	      <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarsExampleDefault" aria-controls="navbarsExampleDefault" aria-expanded="false" aria-label="Toggle navigation">
-	        <span class="navbar-toggler-icon"></span>
+	      <button class="navbar-toggler navbar-toggler-right pull-right" type="button" data-toggle="collapse" data-target="#nav-primary" aria-controls="nav-primary" aria-expanded="false" aria-label="Toggle navigation">
+	        <!--<span class="navbar-toggler-icon"></span>-->
+			  <span></span>
+			  <span></span>
+			  <span></span>
+			  <span></span>     
+	        <!--<span class="mobile-menu-button">
+	        	<i class="mobile-menu-button-line-top"></i>
+	        	<i class="mobile-menu-button-line-middle"></i>
+	        	<i class="mobile-menu-button-line-bottom"></i>
+	        <span>-->
 	      </button>
 	      <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
 		      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );	
