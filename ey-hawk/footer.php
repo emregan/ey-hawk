@@ -44,7 +44,9 @@
 	</footer>
 
 </section>
+
 <?php wp_footer(); ?>
 
+<span class="scroll-to-top"><i class="fa fa-angle-up"></i></span>
 </body>
 </html>

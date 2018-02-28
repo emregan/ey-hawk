@@ -4,9 +4,17 @@ jQuery(document).ready(function($){
 	$(document).on("scroll", function(){
 		if ($(document).scrollTop() > 175){
 		  $("nav").addClass("shrink");
+		  $('.scroll-to-top').fadeIn(200);    // Fade in the arrow
 		} else {
 			$("nav").removeClass("shrink");
+			$('.scroll-to-top').fadeOut(200);   // Else fade out the arrow
 		}
+	});
+	
+	$('.scroll-to-top').click(function() {      // When arrow is clicked
+	    $('body,html').animate({
+	        scrollTop : 0                       // Scroll to top of body
+	    }, 500);
 	});
 	
 	
