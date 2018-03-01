@@ -1,6 +1,6 @@
 {
     "key": "group_5a93a13225ba9",
-    "title": "Customer Success Stories",
+    "title": "Customer Success Stories - OLD",
     "fields": [
         {
             "key": "field_5a93a132283fc",
@@ -179,17 +179,17 @@
             {
                 "param": "page_template",
                 "operator": "==",
-                "value": "page-customers.php"
+                "value": "default"
             }
         ]
     ],
-    "menu_order": 0,
+    "menu_order": 999,
     "position": "normal",
     "style": "default",
     "label_placement": "top",
     "instruction_placement": "label",
     "hide_on_screen": "",
-    "active": 1,
+    "active": 0,
     "description": "",
-    "modified": 1519677331
+    "modified": 1519933075
 }

@@ -1078,8 +1078,7 @@ form.wpcf7-form label {
   -moz-transition: .5s ease-in-out;
   -o-transition: .5s ease-in-out;
   transition: .5s ease-in-out;
-  cursor: pointer;
-  border: 1px solid red;
+  cursor: pointer;s
   padding: 25px;
   
 }
@@ -1148,6 +1147,10 @@ top: 23px;
   left: 50%;
 }
 
+body.single-ey_customer h1.entry-title:before {
+    content: 'customer success story:  ';
+    text-transform: uppercase;
+}
 
 
 @media (min-width: 992px) {
@@ -1208,7 +1211,7 @@ top: 23px;
 }
 @media (min-width: 768px) {
 	.container {
-	    width: 920px;
+	    width: 1200px;
 	    max-width: 100%;
 	}
 }
@@ -1216,5 +1219,20 @@ top: 23px;
 @media (max-width: 991px) {
 	.navbar-toggleable-md>.container {
 	    width: 100%;
+	}
+	nav.navbar {
+		position: relative;
+	}
+}
+@media (min-width: 768px) {
+	.container {
+	    width: 1200px;
+	    max-width: 100%;
+	}
+}
+@media (max-width: 767px) {
+	.container {
+		width: 1000px;
+		max-width: 100%;
 	}
 }
