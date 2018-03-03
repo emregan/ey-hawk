@@ -8,11 +8,6 @@
 			  <span></span>
 			  <span></span>
 			  <span></span>     
-	        <!--<span class="mobile-menu-button">
-	        	<i class="mobile-menu-button-line-top"></i>
-	        	<i class="mobile-menu-button-line-middle"></i>
-	        	<i class="mobile-menu-button-line-bottom"></i>
-	        <span>-->
 	      </button>
 	      <a class="navbar-brand" href="<?php bloginfo( 'url' ); ?>">
 		      <?php $custom_logo_id = get_theme_mod( 'custom_logo' );	

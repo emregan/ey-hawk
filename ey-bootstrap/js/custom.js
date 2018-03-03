@@ -3,10 +3,14 @@ jQuery(document).ready(function($){
 	// shrink scrollbar
 	$(document).on("scroll", function(){
 		if ($(document).scrollTop() > 175){
-		  $("nav").addClass("shrink");
+			if ($(window).width() > 991) {
+				$("nav").addClass("shrink");
+			}
 		  $('.scroll-to-top').addClass('active');    // Fade in the arrow
 		} else {
-			$("nav").removeClass("shrink");
+			if ($(window).width() > 991) {
+				$("nav").removeClass("shrink");
+			}
 			$('.scroll-to-top').removeClass('active');   // Else fade out the arrow
 		}
 	});

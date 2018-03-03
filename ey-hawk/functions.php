@@ -72,3 +72,6 @@ add_shortcode('wpb_childpages', 'wpb_list_child_pages');
 
 /** Custom Post Types */
 require_once( 'functions/cpt.php' );
+
+/** Search form */
+require_once( 'functions/searchform.php' );

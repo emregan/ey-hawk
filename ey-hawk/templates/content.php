@@ -32,7 +32,7 @@ $this_id = $post->ID;
 			
 			<div class="row">
 				
-				<div class="col-md-3 sidebar left">
+				<div class="col-md-3 sidebar left d-none d-lg-block">
 					
 					<?php echo wpb_list_child_pages(); ?>
 				
@@ -43,6 +43,11 @@ $this_id = $post->ID;
 							the_content();
 						?>
 					</div><!-- .entry-content -->
+				</div>
+				<div class="col-md-12 sidebar left .d-none .d-sm-block .d-md-none .d-lg-none .d-xl-none">
+					
+					<?php echo wpb_list_child_pages(); ?>
+				
 				</div>
 				
 			<div class="row">
