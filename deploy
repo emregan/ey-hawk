@@ -1,0 +1,4 @@
+#!/bin/sh
+
+rsync -avn --exclude ".DS_Store" --rsh=ssh ./ey-bootstrap/ hawkish@52.226.75.236:/var/www/html/wp-content/themes/ey-bootstrap
+rsync -avn --exclude ".DS_Store" --rsh=ssh ./ey-hawk/ hawkish@52.226.75.236:/var/www/html/wp-content/themes/ey-hawk
