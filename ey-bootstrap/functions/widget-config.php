@@ -44,3 +44,10 @@ register_sidebar( array(
 	'before_title' => '<h3 class="widget-title">',
 	'after_title' => '</h3>',
 ) );
+
+// Limit # of archives
+function my_limit_archives( $args ) {
+    $args['limit'] = 10;
+    return $args;
+}
+add_filter( 'widget_archives_args', 'my_limit_archives' ); 

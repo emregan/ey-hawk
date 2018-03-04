@@ -1007,7 +1007,7 @@ button.button:focus {
 .sidebar-right ul li a {
 	color: inherit;
     font-size: 13px;
-    display: block;
+    display: inline-block;
     padding: 6px 0;
     text-decoration: none;
     -webkit-transition: color .4s ease,text-shadow .4s ease,background-color .4s ease,border-color .4s ease,-webkit-box-shadow .4s ease,opacity .4s ease;
