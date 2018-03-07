@@ -37,3 +37,6 @@ require_once( 'functions/widget-config.php' );
 
 /** OG Tags */
 require_once( 'functions/og-tags.php' );
+
+/** Misc */
+require_once( 'functions/misc.php' );

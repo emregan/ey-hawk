@@ -1,9 +1,9 @@
 <!-- RESOURCES -->
 <?php // vars
 	$title = get_the_title();
-	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<br />', $title ) : '';
+	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<span class="break"> </span>', $title ) : '';
 	$subtitle = get_the_content();
-	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<br />', $subtitle ) : '';
+	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<span class="break"> </span>', $subtitle ) : '';
 	$cards = get_sub_field('overview_cards');
 	$button = get_sub_field( 'overview_button' );
 	$button_link = get_sub_field( 'overview_button_link' );

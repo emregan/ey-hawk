@@ -9,7 +9,7 @@
   <div class="container">
     <h2><?php echo $pipled_title; ?></h2>
     <div class="section-intro"><?php echo $piped_subtitle; ?></div>
-    
+
     <div class="section-cards">
 	    
 	    <div class="button-group filters-button-group">
@@ -24,12 +24,13 @@
 			'post_type' => 'ey_customer',
 			'post_status' => 'publish',
 			'order' => 'ASC',
-			'orderby' => 'menu_order'
+			'orderby' => 'title',
+			'posts_per_page' => '-1',
 		);
 	    $loop = new WP_Query( $args );
 	    if ( $loop->have_posts() ) : ?>
 	    
-	    <div class="grid">
+	    <div class="grid" data-isotope='{ "itemSelector": ".element-item", "layoutMode": "cellsByRow", "cellsByRow": { "columnWidth": ".grid-sizer" } }'>
 		    
 		    <div class="grid-sizer"></div>
 	    
@@ -37,7 +38,13 @@
 	        while ( $loop->have_posts() ) : $loop->the_post(); ?>
 	        	
 	        	<?php // vars
-		        	$card_category = implode(' ', get_field('card_category'));
+		        	// $card_category = implode(' ', get_field('card_category'));
+		        	$cat = get_field('card_category');
+		        	if ( is_array( $cat ) ) {
+			        	$card_category = implode(' ', $cat );
+		        	} else {
+			        	$card_category = $cat;
+		        	}
 			    	$card_title = get_field('card_title');
 			        $card_subtitle = get_field('card_subtitle');
 			    	$card_description = get_field('card_description');
@@ -50,9 +57,11 @@
 					$image_url = $image_array[0]; 
 		        	
 		        ?>
+		        
+		        
 	            <div class="element-item <?php echo $card_category; ?>" data-category="<?php echo $card_category; ?>">
 						
-					<a href="" class="hover-image" style="background-image: url(<?php echo $image_url; ?>);" alt="<?php echo $card_title; ?>">
+					<a href="<?php echo $card_link; ?>" class="hover-image" style="background-image: url(<?php echo $image_url; ?>);" alt="<?php echo $card_title; ?>">
 						<div class="hover-image-text" style="background-color: <?php echo $card_hover; ?>;">
 							<p><?php echo $card_subtitle; ?></p>
 						</div>
@@ -71,6 +80,5 @@
 	    endif;
 	    wp_reset_postdata();
 		?>
-
   </div>
 </section>

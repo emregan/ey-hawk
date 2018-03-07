@@ -1,9 +1,9 @@
 <!-- SONOMA SLIDER -->
 <?php // vars
 	$title = get_sub_field('overview_title');
-	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<br />', $title ) : '';
+	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<span class="break"> </span>', $title ) : '';
 	$subtitle = get_sub_field('overview_subtitle');
-	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<br />', $subtitle ) : '';
+	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<span class="break"> </span>', $subtitle ) : '';
 	$slides = get_sub_field('overview_slides');
 	$button = get_sub_field( 'overview_button' );
 	$button_link = get_sub_field( 'overview_button_link' );

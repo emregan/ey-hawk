@@ -42,8 +42,17 @@ jQuery(document).ready(function($){
 	  percentPosition: true,
 	  masonry: {
 	    columnWidth: '.grid-sizer'
+	    //columnWidth: $container.width() / 5
 	  }
+	  /*
+	  layoutMode: 'cellsByRow',
+	  cellsByRow: {
+	    columnWidth: '.grid-sizer'
+	  }*/
 	});
+	
+	
+	
 	// filter functions
 	var filterFns = {
 	  // show if number is greater than 50

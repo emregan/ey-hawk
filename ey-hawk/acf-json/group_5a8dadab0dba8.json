@@ -139,6 +139,33 @@
                                     "layout": "vertical",
                                     "toggle": 0,
                                     "return_format": "value"
+                                },
+                                {
+                                    "key": "field_5aa0477f4a0fe",
+                                    "label": "Button Color",
+                                    "name": "overview_button_color",
+                                    "type": "select",
+                                    "instructions": "",
+                                    "required": 0,
+                                    "conditional_logic": 0,
+                                    "wrapper": {
+                                        "width": "",
+                                        "class": "",
+                                        "id": ""
+                                    },
+                                    "choices": {
+                                        "white": "White",
+                                        "orange": "Orange"
+                                    },
+                                    "default_value": [
+                                        "orange"
+                                    ],
+                                    "allow_null": 0,
+                                    "multiple": 0,
+                                    "ui": 0,
+                                    "ajax": 0,
+                                    "return_format": "value",
+                                    "placeholder": ""
                                 }
                             ]
                         },
@@ -176,6 +203,44 @@
                     "label": "Industry Expertise",
                     "display": "block",
                     "sub_fields": [
+                        {
+                            "key": "field_5a9dbe2cc3169",
+                            "label": "Title",
+                            "name": "overview_title",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
+                        {
+                            "key": "field_5a9dbe4a055df",
+                            "label": "Subtitle",
+                            "name": "overview_subtitle",
+                            "type": "text",
+                            "instructions": "",
+                            "required": 0,
+                            "conditional_logic": 0,
+                            "wrapper": {
+                                "width": "",
+                                "class": "",
+                                "id": ""
+                            },
+                            "default_value": "",
+                            "placeholder": "",
+                            "prepend": "",
+                            "append": "",
+                            "maxlength": ""
+                        },
                         {
                             "key": "field_5a90d517e4fa4",
                             "label": "Cards",
@@ -985,5 +1050,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1519659051
+    "modified": 1520453600
 }

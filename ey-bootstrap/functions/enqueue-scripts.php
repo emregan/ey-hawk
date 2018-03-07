@@ -77,6 +77,13 @@ function eybootstrap_enqueue_stuff() {
          get_template_directory_uri() . '/js/jquery.isotope.js',
         array('jquery')
     );
+    
+    // Isotope Cells by row layout
+    wp_enqueue_script(
+        'jquery-isotope-cellsbyrow', 
+         get_template_directory_uri() . '/js/jquery.isotope.cellsbyrow.js',
+        array('jquery-isotope')
+    );
 
 }
 

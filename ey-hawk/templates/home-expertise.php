@@ -1,9 +1,9 @@
 <!-- JUMBOTRON -->
 <?php // vars
 	$title = get_sub_field('overview_title');
-	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<br />', $title ) : '';
+	$pipled_title = ! empty( $title ) ? str_replace( ' | ', '<span class="break"> </span>', $title ) : '';
 	$subtitle = get_sub_field('overview_subtitle');
-	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<br />', $subtitle ) : '';
+	$piped_subtitle = ! empty( $subtitle ) ? str_replace( ' | ', '<span class="break"> </span>', $subtitle ) : '';
 	$cards = get_sub_field('overview_cards');
 ?>
 <section class="expertise text-center">
