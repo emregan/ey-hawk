@@ -30,7 +30,7 @@
 							$image_url = $image_array[0];
 				    ?>
 				    
-			    	<div class="col-md-4">
+			    	<div class="col-md-3">
 				    	<figure><a href=""><img src="<?php echo $image_url; ?>" alt="<?php echo $card_title; ?>"></a></figure>		    	
 			    	</div>
 			        

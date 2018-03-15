@@ -131,4 +131,35 @@ jQuery(document).ready(function($){
 	  // trigger event handler to init Isotope
 	  onHashchange();
 	
+	$( 'a[aria-expanded="true"][data-toggle="dropdown"]' ).click(function(event) {
+		event.stopPropagation();
+	});
+	
+	$('.navbar-nav-auto a.t').on("click", function(e){;
+	    $(this).next('ul').toggle();
+	    $(this).attr('aria-expanded', function(index, attr){
+		    return attr == 'true' ? 'false' : 'true';
+		});
+	    e.stopPropagation();
+	    e.preventDefault();
+	  });
+	
+	
+	// Bootstrap menu magic
+	  $(window).resize(function() {
+	    if ($(window).width() < 768) {
+	      $(".dropdown-toggle").attr('data-toggle', 'dropdown');
+	    } else {
+	      $(".dropdown-toggle").removeAttr('data-toggle dropdown');
+	    }
+	  });
+	
+	// Set pseudo selector content for customer times
+	
+	$( 'a.hover-image' ).each(function() {
+		$alt = $(this).attr('alt');
+		$(this).after().css('content', $alt );
+	});
+	
+	
 });

@@ -14,9 +14,9 @@
 	    
 	    <div class="button-group filters-button-group">
 		  <button class="button is-checked" data-filter="*">All Customers</button>
-		  <!--<button class="button" data-filter=".professional">All Professional Services</button>
+		  <button class="button" data-filter=".professional">All Professional Services</button>
 		  <button class="button" data-filter=".manufacturing">All Manufacturing</button>
-		  <button class="button" data-filter=".isv">All ISVs</button>-->
+		  <button class="button" data-filter=".isv">All ISVs</button>
 		</div>
 		
 		<?php
@@ -55,19 +55,18 @@
 					$image_size = 'customer-success-logo'; // custom image size
 					$image_array = wp_get_attachment_image_src($image_id, $image_size);
 					$image_url = $image_array[0]; 
-					$card_color = '#1b75bb';
 		        	
 		        ?>
 		        
 		        
 	            <div class="element-item <?php echo $card_category; ?>" data-category="<?php echo $card_category; ?>">
 						
-					<a href="<?php echo $card_link; ?>" class="hover-image" style="background-color:<?php echo $card_color; ?>;" alt="<?php echo $card_title; ?>">
+					<a href="<?php echo $card_link; ?>" class="hover-image" style="background-image: url(<?php echo $image_url; ?>);" alt="<?php echo $card_title; ?>">
 						<div class="hover-image-text" style="background-color: <?php echo $card_hover; ?>;">
 							<p><?php echo $card_subtitle; ?></p>
 						</div>
 					</a>
-			    	<!--<h3><?php echo $card_title; ?></h3>-->
+			    	<h3><?php echo $card_title; ?></h3>
 			    	<p><?php echo $card_description; ?></p>		
 			    	 
 				     	

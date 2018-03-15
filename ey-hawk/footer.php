@@ -39,7 +39,7 @@
 	</footer>
 	<footer class="copyright">
 	    <div class="container">
-	        <small>&copy; <?php echo date('Y'); ?> EY <?php echo bloginfo('name'); ?>.</small>
+	        <small>&copy; <?php echo date('Y'); ?> <?php echo bloginfo('name'); ?>.</small>
 	    </div>
 	</footer>
 

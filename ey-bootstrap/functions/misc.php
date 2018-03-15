@@ -11,3 +11,12 @@ function excerpt($limit) {
   $excerpt = preg_replace('\'[[^]]*]\'','',$excerpt);
   return $excerpt;
 }
+
+function register_my_menus() {
+  register_nav_menus(
+    array(
+      'primary' => __( 'Primary' )
+    )
+  );
+}
+add_action( 'init', 'register_my_menus' );
