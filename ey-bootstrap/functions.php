@@ -40,3 +40,6 @@ require_once( 'functions/og-tags.php' );
 
 /** Misc */
 require_once( 'functions/misc.php' );
+
+/** Meta tags in header */
+require_once( 'functions/meta.php' );

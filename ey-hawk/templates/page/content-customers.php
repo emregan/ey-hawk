@@ -12,12 +12,12 @@
 
     <div class="section-cards">
 	    
-	    <div class="button-group filters-button-group">
+	    <!--<div class="button-group filters-button-group">
 		  <button class="button is-checked" data-filter="*">All Customers</button>
-		  <!--<button class="button" data-filter=".professional">All Professional Services</button>
+		  <button class="button" data-filter=".professional">All Professional Services</button>
 		  <button class="button" data-filter=".manufacturing">All Manufacturing</button>
-		  <button class="button" data-filter=".isv">All ISVs</button>-->
-		</div>
+		  <button class="button" data-filter=".isv">All ISVs</button>
+		</div>-->
 		
 		<?php
 		$args = array(

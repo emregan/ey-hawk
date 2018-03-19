@@ -466,6 +466,7 @@ div.navigation a:hover i {
 	background-size: cover;
 	border-radius: 0;
 	position: relative;
+	margin-bottom: 0;
 }
 .jumbotron::after {
 	content: "";
@@ -1725,4 +1726,8 @@ body.single-ey_customer h1.entry-title:before {
 		width: 1000px;
 		max-width: 100%;
 	}
+}
+
+.mtsnb .mtsnb-container {
+    padding: 2px 60px
 }

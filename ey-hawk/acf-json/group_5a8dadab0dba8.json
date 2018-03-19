@@ -1034,9 +1034,9 @@
     "location": [
         [
             {
-                "param": "page_type",
+                "param": "page",
                 "operator": "==",
-                "value": "front_page"
+                "value": "4"
             }
         ]
     ],
@@ -1050,5 +1050,5 @@
     ],
     "active": 1,
     "description": "",
-    "modified": 1520453600
+    "modified": 1521251646
 }
