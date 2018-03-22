@@ -10,6 +10,15 @@
 	</div><!-- .site-content -->
 	
 </div><!-- .site -->
+<section class="footer-alert">
+	<div class="container">
+        <div class="row">
+	        <div class="col-lg-12 text-center">
+		        The information on this site is current only through March 15, 2018
+	        </div>
+        </div>
+	</div>
+</section>
 <section class="section-footer">
 	<footer class="footer">
 	    <div class="container">

@@ -1,10 +1,3 @@
-<?php
-/**
- * OldTemplate Name: Customers
- *
- */
-?>
-
 <?php get_header(); ?>
 
 	<?php include_once( 'templates/bits/navbar.php' ); ?>

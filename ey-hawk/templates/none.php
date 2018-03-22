@@ -15,16 +15,12 @@
 	<div class="container">
 			
 			<div class="row">
-				<div class="col-md-8">
+				<div class="col-md-12">
 					<div class="entry-content">
-						<h2 class="text-center">Not found</h2>
-						Sorry, whatever you were looking for isn't here.
+						<h1>Page Not found</h1>
+						<h2>Error 404</h2>
+						Sorry, the page you were looking for at this URL was not found.
 					</div><!-- .entry-content -->
-				</div>
-				<div class="col-md-4 sidebar-right">
-					
-					<?php get_sidebar(); ?>
-				
 				</div>
 				
 			</div><!-- .row -->

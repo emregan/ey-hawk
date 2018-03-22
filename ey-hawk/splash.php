@@ -8,13 +8,13 @@ $title = get_field( 'title' );
 $bgimage = get_field( 'background_image' );
 $buttons = get_field( 'buttons' );
 $logo = get_field( 'logo' );	
-
 ?>
 	
 <!DOCTYPE html>
 <html lang="en">
     <head>
 	<link rel='stylesheet' id='awesplash-style-css'  href='/wp-content/plugins/awesplash/assets/css/main.css?ver=1.0.1' type='text/css' media='all' />
+	<title><?php wp_title(' - ','true','right'); ?><?php bloginfo('name'); ?></title>
 	<style id='awesplash-style-inline-css' type='text/css'>
 div.logo {
     margin-bottom: 200px;
